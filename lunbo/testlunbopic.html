@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head> 
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+ <title>轮播图数组的简单实现</title> 
+ <script type="text/javascript"> 
+  var num = 0; 
+  var time= 1000;/*切换的时间*/
+  var arr=new Array();
+  arr[0]="imgs/1.jpg";
+  arr[1]="imgs/2.jpg";
+  arr[2]="imgs/3.jpg";
+  setInterval(showPic,time); 
+  function showPic() { 
+   var imgs = document.getElementById("pic"); 
+   if (num == arr.length-1) { 
+   num = 0; /*如果是最后一张，显示第一张*/
+   } else { 
+    num= num+1; /*如果没有到最后一张，显示下一张*/
+     } 
+   imgs.src = arr[num]; 
+  } 
+ </script> 
+
+
+ </head> 
+ <body> 
+  <img id= "pic" src="imgs/1.jpg" /> 
+
+</body>
+</html>

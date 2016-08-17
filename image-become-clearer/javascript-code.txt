@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Í¼Æ¬ÏÔÊ¾Öð½¥ÇåÎú</title>
+<style type="text/css"> 
+  .class{
+      width:200px;height:133px;position:absolute;
+      margin-left:0px;*margin-left:-200px;
+      _margin-left:-200px;margin-top:-133px;
+       *margin-top:-0px;_margin-top:-0px;
+       z-index:1;background:#000;
+  }
+  .class1{
+      filter:alpha(opacity=60);-moz-opacity:0.6;opacity: 0.6
+  }
+  .class2{
+      filter:alpha(opacity=40);-moz-opacity:0.4;opacity: 0.4
+  }
+  .class3{
+      filter:alpha(opacity=20);-moz-opacity:0.2;opacity: 0.2
+  }
+  .class4{
+      filter:alpha(opacity=0);-moz-opacity:0;opacity: 0
+  }
+</style>
+</head>
+<body>
+<img id="img1" src="047.gif" style="width:200px;height:133px;" onload="show(1)" />
+<div id="div2" ></div>
+<script type="text/javascript" > 
+function show(n){
+   document.getElementById("div2").className = "class class"+n;
+   n = parseInt(n) + 1;
+   if(n <= 2)
+       change = setTimeout("show("+n+")",1000);
+   else if(n <= 4)
+       change= setTimeout("show("+n+")",1000);
+   else
+       if (ajax_evt) 
+       {
+       clearTimeout(change);        
+       }
+
+}
+</script>
+</body>
+</html>

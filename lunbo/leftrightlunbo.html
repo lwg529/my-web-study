@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>实现图片的左右无缝滚动</title>
+<style type="text/css">
+	/*清除默认的格式*/
+	*{
+	margin:0;
+	padding:0;
+	}
+	/*设置水印居中，大小，溢出隐藏*/
+	#mainbox{
+	width:300px;
+	height:200px;
+	overflow:hidden;
+	position:relative;
+	margin:10px auto;
+	}
+	#piclist{
+	list-style:none;
+	width:10000px;
+	height:200px;
+	overflow:hidden;
+	position:absolute;
+	left:-300px;
+	
+	}
+	/*浮动实现一行显示*/
+	li{
+	float:left;
+	}
+	li,img{
+	width:300px;
+	height:200px;
+	}
+	/*按钮控制轮播的方向*/
+	#anniu{
+	width:120px;
+	position:relative;
+	margin:0 auto;
+	
+	}
+	/*按钮的样式*/
+	input{
+	width:50px;
+	height:20px; 
+	background-color:#99FF66;
+
+	}
+</style>
+<script>
+	window.onload=function(){
+	
+	var picList=document.getElementById("piclist");//获取列表
+	var liList=document.getElementsByTagName("li");//获取图片
+	var picWidth=liList[0].clientWidth;//每张图片的宽度
+	var len=liList.length;//图片的个数
+	var moveWidth=(len-1)*picWidth*(-1);//移动的距离
+	var moveLeft=picList.offsetLeft;//初始状态下距离
+	var speed=3;//移动的速度
+	var btn=document.getElementsByTagName("input");//按钮
+	 btn[0].onclick = function(){  //按钮控制移动的方向
+        speed = 3;
+    };
+    btn[1].onclick = function(){
+        speed = -3;
+    };
+		
+	timeer=setInterval(function (){ //设置移动
+	if(moveLeft<moveWidth)
+	{
+	  picList.style.left="-300px"; //向左移动，图片顺序为3` 1 2 3 1` 当移动到最后一张1`时，跳转到第二张1
+	  moveLeft=-300;	  
+	}
+	if(moveLeft>-300){	
+	 picList.style.left="-1200px";//向右移动，当移动到第一张3`时，跳转到第四张3
+	  moveLeft=-1200;	
+	}	
+	moveLeft=moveLeft-speed;  //距离的改变
+	picList.style.left=moveLeft+"px";
+	},30);
+	
+	picList.onmouseover = function(){ //当有鼠标经过时，停止移动
+        clearInterval(timeer);
+    };
+   picList.onmouseout = function(){   //鼠标移开，继续移动
+      timeer=setInterval(function (){
+	if(moveLeft<moveWidth)
+	{
+	  picList.style.left="-300px";
+	  moveLeft=-300;	  
+	}
+	if(moveLeft>-300){	
+	 picList.style.left="-1200px";
+	  moveLeft=-1200;	
+	}	
+	moveLeft=moveLeft-speed;
+	picList.style.left=moveLeft+"px";
+	},30);
+   };
+	
+	}
+	
+	</script>
+</head>
+
+<body>
+ <div id="mainbox">
+ 	<ul id="piclist">
+	<li><img src="imgs/3.jpg" /></li>
+	<li><img src="imgs/1.jpg" /></li>
+	<li><img src="imgs/2.jpg" /></li>
+	<li><img src="imgs/3.jpg" /></li>
+	<li><img src="imgs/1.jpg" /></li>
+	
+	</ul>
+	
+ </div>
+ <div id="anniu">
+ 	<form>
+	<input type="button" value="left"/>
+	<input  type="button" value="right"/>
+</form>
+ </div> 
+</body>	
+</html>

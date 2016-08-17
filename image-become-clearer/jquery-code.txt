@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+<style>
+#img1{
+width:200px;
+height:133px;
+display:none;
+
+}
+</style>
+<script>
+$(document).ready(function(){ 
+    $("#img1").fadeIn(3000); 
+});
+</script>
+</head>
+<body>
+<img id="img1" src="047.gif"  />
+</body>
+</html>

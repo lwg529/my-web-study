@@ -1,0 +1,74 @@
+
+ <!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="gb2312">
+		<title>向左轮播图</title>
+		<style>
+			* {
+				margin: 0px;
+				padding: 0px;
+			}
+			#container{
+				width: 300px;
+				height: 200px;
+				margin: 10px auto;
+				overflow: hidden;
+				position: relative;				
+			}
+			#list {
+				list-style-type: none;
+				width: 10000px;
+				overflow: hidden;
+				position: absolute;
+				left: -300px;
+			}
+			li {
+				float: left;
+			}
+			li,img {
+				width: 300px;
+				height: 200px;
+			}
+		</style>
+		<script>
+			window.onload=function() {
+				var list = document.getElementById("list");
+				var liList = document.getElementsByTagName("li"); //所有图片
+				var len = liList.length; //个数
+				var liwidth = liList[0].clientWidth; //每张图片的宽度
+				var totalWidth = (len - 1) * liwidth * (-1); //图片总宽度
+				var varyLeft = list.offsetLeft; //ul初始left值
+				var speed = 3; //每次移动距离 
+                
+				function move() {
+					if (varyLeft < totalWidth) {//左移完最后一张后，瞬间切换到第二张a，第二张a和最后一张a'相同
+						list.style.left = "-300px";
+						varyLeft = -300;
+					}
+					
+					varyLeft -= speed;//每次移动
+					list.style.left = varyLeft + "px";
+				}
+
+				var timer = setInterval(move, 30);//每个40毫秒左移一次
+				
+			}
+		</script>
+	</head>
+
+	<body>
+		<div id="container">
+			<ul id="list">
+				<li><img src="imgs/3.jpg" /></li>
+				<li><img src="imgs/1.jpg"/>	</li>
+				<li><img src="imgs/2.jpg"/></li>		
+				<li><img src="imgs/3.jpg" /></li>
+				<li><img src="imgs/1.jpg"/>	</li>				
+			</ul>
+		</div>
+		
+	</body>
+
+</html>

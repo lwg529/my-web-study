@@ -1,7 +1,7 @@
 学习过程中写的代码
 ====
 w3c_homepage效果图
-![](https://github.com/lwg529/my-web-study/blob/master/Side-navigation/side%20navigation.png)
+![](https://github.com/lwg529/my-web-study/blob/master/w3c_homepage/w3c_homepage.png)
 
 Side-navigation效果图
 ![](https://github.com/lwg529/my-web-study/blob/master/Side-navigation/side%20navigation.png)

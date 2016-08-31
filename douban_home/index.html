@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>豆瓣网实战</title>
+   <!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>-->
+    <link rel="stylesheet" href="doubanimg/douban.css"/>
+    <script src="douban.js"></script>
+</head>
+<body>
+<!--顶部-->
+    <div id="hd-header">
+       <!-- logo-->
+        <h1>
+            <a href="" class="header-logo"></a>
+        </h1>
+        <!--搜索-->
+        <div class="header-search-con ">
+            <form action="">
+                <input type="text" name="search" class="header-search" value="电影、音乐、书籍、小组、小站、成员"/>
+                <input type="submit" name="submit" value="" class="header-submit"/>
+            </form>
+        </div>
+        <ul class="header-nav">
+            <li><a href="" class="header-book"></a></li>
+            <li><a href="" class="header-movie"></a></li>
+            <li><a href="" class="header-music"></a></li>
+            <li><a href="" class="header-group"></a></li>
+            <li><a href="" class="header-fm"></a></li>
+            <li><a href="" class="header-city"></a></li>
+            <li><a href="" class="header-local"></a></li>
+        </ul>
+    </div>
+<!--顶部结束-->
+<!--注册区域-->
+<div id="hd-reg-background">
+    <div id="hd-reg">
+        <div class="hd-reg-app">
+            <div class="hd-reg-info">
+                <h2 class=>豆瓣</h2>
+                <p>汇集一亿人的生活趣味</p>
+                <button class="hd-reg-load">下载豆瓣客户端</button>
+                <div class="hd-reg-weixin">
+                    <img src="doubanimg/icon_qrcode.png" alt=""/>
+                    <p class="hd-reg-weixinbig">
+                        <img src="doubanimg/doubanapp_qrcode.png" alt=""/>
+                        <span>iOS / Android 扫码直接下载</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <p class="hd-reg-part"></p>
+        <div class="hd-reg-login">
+            <form action="">
+                <p><input type="text" name="username" class="hd-reg-input " value="邮箱/手机号" />
+                <p><input type="password" name="password" class="hd-reg-input" placeholder="密码"/><span><a href="">忘记密码?</a></span></p>
+                <label for="reg-check"><input type="checkbox" id="reg-check" />记住我</label>
+                <input type="submit" class="hd-reg-submit" value="登录"/>
+                <input type="button" class="hd-reg-submit" value="注册"/>
+            </form>
+        </div>
+    </div>
+</div>
+<!--注册区域结束-->
+<!--内容区域-->
+<div id="hd-content">
+    <!--热点内容-->
+    <div id="hot-point">
+        <h3>热点内容······</h3>
+        <div class="hot-side">
+            <a href="" title="豆瓣每日精选" class="hot-side-photo"><img src="doubanimg/hot-point-side.jpg" alt=""/></a>
+            <h3>线上活动······</h3><span>（<a href="">更多</a>）</span>
+            <ul>
+                <li><a href="">你在读什么书(有奖品)</a></li>
+                <li>时间:<time>9月28日-12月27日</time></li>
+                <li>3874人参加</li>
+            </ul>
+            <ul>
+                <li><a href="">【全球性征集】女性正在做什么（写下你的故事)</a></li>
+                <li>时间:<time>9月28日-12月27日</time></li>
+                <li>2628人参加</li>
+            </ul>
+        </div>
+        <div class="hot-point-photo">
+            <dl>
+                <dt><img src="doubanimg/hot-point-photo.jpg" alt="葡国纪行"/></dt>
+                <dd><a href="">葡国纪行</a>33张照片</dd>
+            </dl>
+            <dl>
+                <dt><img src="doubanimg/hot-point-photo.jpg" alt="葡国纪行"/></dt>
+                <dd><a href="">葡国纪行</a>33张照片</dd>
+            </dl>
+            <dl>
+                <dt><img src="doubanimg/hot-point-photo.jpg" alt="葡国纪行"/></dt>
+                <dd><a href="">葡国纪行</a>33张照片</dd>
+            </dl>
+            <dl>
+                <dt><img src="doubanimg/hot-point-photo.jpg" alt="葡国纪行"/></dt>
+                <dd><a href="">葡国纪行</a>33张照片</dd>
+            </dl>
+        </div>
+        <div class="hot-point-title">
+            <ul>
+                <li class="title-first">
+                    <strong><a href="">还以为会在一起</a></strong>
+                    <span>林探惜的日记</span>
+                    <p>今天微博上有个热门新闻，说的是一名95后少年网恋几天之后，受不了分手的打击，发...</p>
+                </li>
+                <li><a href="">戒烟需要多久？</a></li>
+                <li><a href="">原创教程：自制接骨木花糖浆（过程图+食谱）+一些糖浆的基本知识介绍</a></li>
+                <li><a href="">不给自己压力，永远都成不了蝴蝶</a></li>
+                <li><a href="">手机拍照和调色技巧</a></li>
+                <li><a href="">法国女人的穿衣宝典 - 轻松模仿Parisian Chic</a></li>
+                <li><a href="">如何在旅行中吃的好又省钱（日本篇）</a></li>
+                <li><a href="">谁说极简就是黑白灰？</a></li>
+                <li><a href="">推荐10部喜欢的科幻电影</a></li>
+                <li><a href="">其实生活可以好一点---租房改造贴</a></li>
+            </ul>
+
+        </div>
+    </div>
+
+    <!--电影-->
+    <div class="con-box">
+        <div id="con-moive" class="clear-float">
+            <div class="child-nav">
+                <h2><a href="">电影</a></h2>
+                <ul>
+                    <li><a href="">影讯&购票</a></li>
+                    <li><a href="">选电影</a><sup>new</sup></li>
+                    <li><a href="">电视剧</a></li>
+                    <li><a href="">排行榜</a></li>
+                    <li><a href="">分类</a></li>
+                    <li><a href="">影评</a></li>
+                    <li><a href="">预告片</a></li>
+                </ul>
+            </div>
+            <div class="child-cont">
+                <h3>正在热映······</h3><span>（<a href="">更多</a>）</span>
+                <div class="clear-float"></div>
+                <dl class="child-ul hot-movie ">
+                    <dt><img src="doubanimg/movie1.jpg" alt=""/></dt>
+                    <dd>夏洛特烦恼</dd>
+                    <dd class="movie-point">8.2</dd>
+                    <dd><button class="button">选座购票</button></dd>
+                </dl>
+                <dl class="child-ul hot-movie">
+                    <dt><img src="doubanimg/movie2.jpg" alt=""/></dt>
+                    <dd>港囧</dd>
+                    <dd class="movie-point">8.2</dd>
+                    <dd><button class="button">选座购票</button></dd>
+                </dl>
+                <dl class="child-ul hot-movie">
+                    <dt><img src="doubanimg/movie3.jpg" alt=""/></dt>
+                    <dd>九层妖塔</dd>
+                    <dd class="movie-point">8.2</dd>
+                    <dd><button class="button">选座购票</button></dd>
+                </dl>
+                <dl class="child-ul hot-movie">
+                    <dt><img src="doubanimg/movie4.jpg" alt=""/></dt>
+                    <dd>解救吾先生</dd>
+                    <dd class="movie-point">8.2</dd>
+                    <dd><button class="button">选座购票</button></dd>
+                </dl>
+                <dl class="child-ul hot-movie">
+                    <dt><img src="doubanimg/movie5.jpg" alt=""/></dt>
+                    <dd>头脑特工队</dd>
+                    <dd class="movie-point">8.2</dd>
+                    <dd><button class="button">选座购票</button></dd>
+                </dl>
+                <dl class="child-ul hot-movie">
+                    <dt><img src="doubanimg/movie6.jpg" alt=""/></dt>
+                    <dd>小黄人大眼萌</dd>
+                    <dd class="movie-point">8.2</dd>
+                    <dd><button class="button">选座购票</button></dd>
+                </dl>
+                <dl class="child-ul hot-movie">
+                    <dt><img src="doubanimg/movie7.jpg" alt=""/></dt>
+                    <dd>诡打墙</dd>
+                    <dd class="movie-point">8.2</dd>
+                    <dd><button class="button">选座购票</button></dd>
+                </dl>
+                <dl class="child-ul hot-movie">
+                    <dt><img src="doubanimg/movie8.jpg" alt=""/></dt>
+                    <dd>巴拉巴拉小魔仙</dd>
+                    <dd class="movie-point">8.2</dd>
+                    <dd><button class="button">选座购票</button></dd>
+                </dl>
+            </div>
+            <div class="child-side">
+                <h3>影片分类······</h3><span>（<a href="">更多</a>）</span>
+                <ul class="moive-arch">
+                    <li><a href="">爱情</a></li>
+                    <li><a href="">喜剧</a></li>
+                    <li><a href="">动画</a></li>
+                    <li><a href="">剧情</a></li>
+                    <li><a href="">科幻</a></li>
+                    <li><a href="">动作</a></li>
+                    <li><a href="">经典</a></li>
+                    <li><a href="">悬疑</a></li>
+                    <li><a href="">青春</a></li>
+                    <li><a href="">犯罪</a></li>
+                    <li><a href="">惊悚</a></li>
+                    <li><a href="">文艺</a></li>
+                    <li><a href="">纪录片</a></li>
+                    <li><a href="">搞笑</a></li>
+                    <li><a href="">励志</a></li>
+                    <li><a href="">恐怖</a></li>
+                    <li><a href="">战争</a></li>
+                    <li><a href="">短片</a></li>
+                    <li><a href="">美国</a></li>
+                    <li><a href="">日本</a></li>
+                    <li><a href="">香港</a></li>
+                    <li><a href="">英国</a></li>
+                    <li><a href="">中国</a></li>
+                    <li><a href="">法国</a></li>
+                    <li><a href="">韩国</a></li>
+                    <li><a href="">台湾</a></li>
+                    <li><a href="">德国</a></li>
+                    <li><a href="">意大利</a></li>
+                </ul>
+                <div class="moive-now"><h3 class="">近期热门······</h3><span>（<a href="">更多</a>）</span></div>
+                <ul class="moive-list">
+                    <li>1.<a href="">十二公民</a></li>
+                    <li>2.<a href="">罪恶之家</a></li>
+                    <li>3.<a href="">刺客聂隐娘</a></li>
+                    <li>4.<a href="">内在美</a></li>
+                    <li>5.<a href="">爷们些</a></li>
+                    <li>6.<a href="">华丽上班族</a></li>
+                    <li>7.<a href="">黑色弥撒</a></li>
+                    <li>8.<a href="">三城记</a></li>
+                    <li>9.<a href="">我和厄尔以及将死的女孩</a></li>
+                    <li>10.<a href="">太平轮(下)彼岸</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--小组-->
+          <div id="con-group" class="clear-float">
+            <div class="child-nav">
+                <h2><a href="">小组</a></h2>
+                <ul>
+                    <li><a href="">精选</a></li>
+                    <li><a href="">文化</a></li>
+                    <li><a href="">摄影</a></li>
+                    <li><a href="">娱乐</a></li>
+                    <li><a href="">时尚</a></li>
+                    <li><a href="">生活</a></li>
+                    <li><a href="">科技</a></li>
+                </ul>
+            </div>
+            <div class="child-cont">
+                <h3>正在热映······</h3><span>（<a href="">更多</a>）</span>
+                <div class="clear-float"></div>
+                <dl class="group-con-ul ">
+                    <dt><a href=""><img src="doubanimg/group1.jpg" alt=""/></a></dt>
+                    <dd><a href="">童年研究|小站上线</a></dd>
+                    <dd>46108个成员</dd>
+                </dl>
+                <dl class="group-con-ul ">
+                    <dt><a href=""><img src="doubanimg/group2.jpg" alt=""/></a></dt>
+                    <dd><a href="">跳跃性思维</a></dd>
+                    <dd>46108个成员</dd>
+                </dl>
+                <dl class="group-con-ul ">
+                    <dt><a href=""><img src="doubanimg/group3.jpg" alt=""/></a></dt>
+                    <dd><a href="">Coursera Learning Platform</a></dd>
+                    <dd>46108个成员</dd>
+                </dl>
+                <dl class="group-con-ul ">
+                    <dt><a href=""><img src="doubanimg/group4.jpg" alt=""/></a></dt>
+                    <dd><a href="">自己给自己剪头发</a></dd>
+                    <dd>46108个成员</dd>
+                </dl>
+                <dl class="group-con-ul ">
+                    <dt><a href=""><img src="doubanimg/group5.jpg" alt=""/></a></dt>
+                    <dd><a href="">我们就是要做衣服自己穿</a></dd>
+                    <dd>46108个成员</dd>
+                </dl>
+                <dl class="group-con-ul ">
+                    <dt><a href=""><img src="doubanimg/group6.jpg" alt=""/></a></dt>
+                    <dd><a href="">我以为我喜欢你是寂静的</a></dd>
+                    <dd>46108个成员</dd>
+                </dl>
+                <dl class="group-con-ul ">
+                    <dt><a href=""><img src="doubanimg/group7.jpg" alt=""/></a></dt>
+                    <dd><a href="">超能力交换小组</a></dd>
+                    <dd>46108个成员</dd>
+                </dl>
+                <dl class="group-con-ul ">
+                    <dt><a href=""><img src="doubanimg/group8.jpg" alt=""/></a></dt>
+                    <dd><a href="">技 艺</a></dd>
+                    <dd>46108个成员</dd>
+                </dl>
+                <dl class="group-con-ul ">
+                    <dt><a href=""><img src="doubanimg/group9.jpg" alt=""/></a></dt>
+                    <dd><a href="">互助搜索引擎</a></dd>
+                    <dd>46108个成员</dd>
+                </dl>
+                <dl class="group-con-ul ">
+                    <dt><a href=""><img src="doubanimg/group10.jpg" alt=""/></a></dt>
+                    <dd><a href="">当时我就淡定了</a></dd>
+                    <dd>46108个成员</dd>
+                </dl>
+                <dl class="group-con-ul ">
+                    <dt><a href=""><img src="doubanimg/group11.jpg" alt=""/></a></dt>
+                    <dd><a href="">帮友邻找对象小组</a></dd>
+                    <dd>46108个成员</dd>
+                </dl>
+                <dl class="group-con-ul ">
+                    <dt><a href=""><img src="doubanimg/group12.jpg" alt=""/></a></dt>
+                    <dd><a href="">跑友</a></dd>
+                    <dd>46108个成员</dd>
+                </dl>
+            </div>
+            <div class="child-side">
+                <h3>小组分类······</h3>
+                <ul class="group-list">
+                    <li class="group-first"><a href="" >兴趣»</a></li>
+                    <li><a href="">旅行</a></li>
+                    <li><a href="">摄影</a></li>
+                    <li><a href="">影视</a></li>
+                    <li><a href="">音乐</a></li>
+                    <li><a href="">文学</a></li>
+                    <li><a href="">游戏</a></li>
+                    <li><a href="">动漫</a></li>
+                    <li><a href="">运动</a></li>
+                    <li><a href="">戏曲</a></li>
+                    <li><a href="">桌游</a></li>
+                    <li><a href="">怪癖</a></li>
+                </ul>
+                <ul class="group-list">
+                    <li class="group-first"><a href="" >生活»</a></li>
+                    <li><a href="">健康</a></li>
+                    <li><a href="">美食</a></li>
+                    <li><a href="">宠物</a></li>
+                    <li><a href="">美容</a></li>
+                    <li><a href="">化妆</a></li>
+                    <li><a href="">护肤</a></li>
+                    <li><a href="">服饰</a></li>
+                    <li><a href="">公益</a></li>
+                    <li><a href="">家庭</a></li>
+                    <li><a href="">育儿</a></li>
+                    <li><a href="">汽车</a></li>
+                </ul>
+                <ul class="group-list">
+                    <li class="group-first"><a href="" >购物»</a></li>
+                    <li><a href="">淘宝</a></li>
+                    <li><a href="">二手</a></li>
+                    <li><a href="">团购</a></li>
+                    <li><a href="">数码</a></li>
+                    <li><a href="">品牌</a></li>
+                    <li><a href="">文具</a></li>
+                </ul>
+                <ul class="group-list">
+                    <li class="group-first"><a href="" >社会»</a></li>
+                    <li><a href="">求职</a></li>
+                    <li><a href="">租房</a></li>
+                    <li><a href="">励志</a></li>
+                    <li><a href="">留学</a></li>
+                    <li><a href="">出国</a></li>
+                    <li><a href="">理财</a></li>
+                    <li><a href="">传媒</a></li>
+                    <li><a href="">创业</a></li>
+                    <li><a href="">考试</a></li>
+                </ul>
+                <ul class="group-list">
+                    <li class="group-first"><a href="" >艺术»</a></li>
+                    <li><a href="">设计</a></li>
+                    <li><a href="">手工</a></li>
+                    <li><a href="">展览</a></li>
+                    <li><a href="">曲艺</a></li>
+                    <li><a href="">舞蹈</a></li>
+                    <li><a href="">雕塑</a></li>
+                    <li><a href="">纹身</a></li>
+                </ul>
+                <ul class="group-list">
+                    <li class="group-first"><a href="" >学术»</a></li>
+                    <li><a href="">人文</a></li>
+                    <li><a href="">社科</a></li>
+                    <li><a href="">自然</a></li>
+                    <li><a href="">建筑</a></li>
+                    <li><a href="">国学</a></li>
+                    <li><a href="">语言</a></li>
+                    <li><a href="">宗教</a></li>
+                    <li><a href="">哲学</a></li>
+                    <li><a href="">软件</a></li>
+                    <li><a href="">硬件</a></li>
+                    <li><a href="">互联网</a></li>
+                </ul>
+                <ul class="group-list">
+                    <li class="group-first"><a href="" >情感»</a></li>
+                    <li><a href="">恋爱</a></li>
+                    <li><a href="">心情</a></li>
+                    <li><a href="">心理学</a></li>
+                    <li><a href="">星座</a></li>
+                    <li><a href="">塔罗</a></li>
+                    <li><a href="">LES</a></li>
+                    <li><a href="">GAY</a></li>
+                </ul>
+                <ul class="group-list">
+                    <li class="group-first"><a href="" >闲聊»</a></li>
+                    <li><a href="">吐槽</a></li>
+                    <li><a href="">笑话</a></li>
+                    <li><a href="">直播</a></li>
+                    <li><a href="">八卦</a></li>
+                    <li><a href="">发泄</a></li>
+                </ul>
+            </div>
+        </div>
+
+    <!--读书-->
+
+        <div class="con-box clear-float">
+            <div id="con-read"  >
+                <div class="child-nav">
+                    <h2><a href="">读书</a></h2>
+                    <ul>
+                        <li><a href="">分类浏览</a></li>
+                        <li><a href="">阅读</a><sup>new</sup></li>
+                        <li><a href="">作者</a></li>
+                        <li><a href="">书评</a></li>
+                        <li><a href="">购书单</a></li>
+                        <li class="nav-li-photo">
+                            <a href="" class="nav-photo book-nav-photo"></a>
+                            <a href="">豆瓣阅读</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="child-cont">
+                    <h3>新书速递······</h3><span>（<a href="">更多</a>）</span>
+                    <div class="clear-float"></div>
+                    <dl class="child-ul book-show ">
+                        <dt><a href=""><img src="doubanimg/book1.jpg" alt=""/></a></dt>
+                        <dd><a href="">少年啊,前路漫</a></dd>
+                        <dd>徐沪生</dd>
+                        <dd><button class="button">免费试读</button></dd>
+                    </dl>
+                    <dl class="child-ul book-show">
+                        <dt><a href=""><img src="doubanimg/book2.jpg" alt=""/></a></dt>
+                        <dd><a href="">悲伤与理智</a></dd>
+                        <dd>〔美〕约瑟夫</dd>
+                        <dd><button class="button">免费试读</button></dd>
+                    </dl>
+                    <dl class="child-ul book-show ">
+                        <dt><a href=""><img src="doubanimg/book3.jpg" alt=""/></a></dt>
+                        <dd><a href="">乌合之众：大众</a></dd>
+                        <dd>〔法〕古斯塔夫</dd>
+                        <dd><button class="button">免费试读</button></dd>
+                    </dl>
+                    <dl class="child-ul book-show">
+                        <dt><a href=""><img src="doubanimg/book4.jpg" alt=""/></a></dt>
+                        <dd><a href="">除了爱，我们什</a></dd>
+                        <dd>张晓晗</dd>
+                        <dd><button class="button">免费试读</button></dd>
+                    </dl>
+
+                   <p><h3 class="book-opus">原创数字作品······</h3><span>（<a href="">更多</a>）</span></p>
+                    <dl class="child-ul book-show">
+                        <dt><a href=""><img src="doubanimg/book5.jpg" alt=""/></a></dt>
+                        <dd><a href="">我认识了一个索</a></dd>
+                        <dd>邓安庆</dd>
+                        <dd>1.99元</dd>
+                        <dd><button class="button">免费试读</button></dd>
+                    </dl>
+                    <dl class="child-ul book-show">
+                        <dt><a href=""><img src="doubanimg/book6.jpg" alt=""/></a></dt>
+                        <dd><a href="">第十三天（中）</a></dd>
+                        <dd>〔德〕梁柯</dd>
+                        <dd>1.99元</dd>
+                        <dd><button class="button">免费试读</button></dd>
+                    </dl>
+                    <dl class="child-ul book-show">
+                        <dt><a href=""><img src="doubanimg/book7.jpg" alt=""/></a></dt>
+                        <dd><a href="">伊斯坦布尔</a></dd>
+                        <dd>原画册</dd>
+                        <dd>1.99元</dd>
+                        <dd><button class="button">免费试读</button></dd>
+                    </dl>
+                    <dl class="child-ul book-show">
+                        <dt><a href=""><img src="doubanimg/book8.jpg" alt=""/></a></dt>
+                        <dd><a href="">京都第五年</a></dd>
+                        <dd>苏枕书（中）</dd>
+                        <dd>1.99元</dd>
+                        <dd><button class="button">免费试读</button></dd>
+                    </dl>
+                </div>
+                <div class="child-side">
+                    <h3>热门标签······</h3><span>（<a href="">更多</a>）</span>
+                    <ul class="book-list">
+                        <li class="book-first">[文学]</li>
+                        <li><a href="">小说</a></li>
+                        <li><a href="">随笔</a></li>
+                        <li><a href="">散文</a></li>
+                        <li><a href="">日本文学</a></li>
+                        <li><a href="">童话</a></li>
+                        <li><a href="">诗歌</a></li>
+                        <li><a href="">名著</a></li>
+                        <li><a href="">港台</a></li>
+                        <li><a href="">更多</a></li>
+                    </ul>
+                    <ul class="book-list">
+                        <li class="book-first">[流行]</li>
+                        <li><a href="">漫画</a></li>
+                        <li><a href="">绘本</a></li>
+                        <li><a href="">推理</a></li>
+                        <li><a href="">青春</a></li>
+                        <li><a href="">言情</a></li>
+                        <li><a href="">科幻</a></li>
+                        <li><a href="">武侠</a></li>
+                        <li><a href="">奇幻</a></li>
+                        <li><a href="">更多</a></li>
+                    </ul>
+                    <ul class="book-list">
+                        <li class="book-first">[文化]</li>
+                        <li><a href="">历史</a></li>
+                        <li><a href="">哲学</a></li>
+                        <li><a href="">传记</a></li>
+                        <li><a href="">设计</a></li>
+                        <li><a href="">建筑</a></li>
+                        <li><a href="">电影</a></li>
+                        <li><a href="">回忆录</a></li>
+                        <li><a href="">音乐</a></li>
+                        <li><a href="">更多</a></li>
+                    </ul>
+                    <ul class="book-list">
+                        <li class="book-first">[生活]</li>
+                        <li><a href="">旅行</a></li>
+                        <li><a href="">励志</a></li>
+                        <li><a href="">职场</a></li>
+                        <li><a href="">美食</a></li>
+                        <li><a href="">教育</a></li>
+                        <li><a href="">灵修</a></li>
+                        <li><a href="">健康</a></li>
+                        <li><a href="">家居</a></li>
+                        <li><a href="">更多</a></li>
+                    </ul>
+                    <ul class="book-list">
+                        <li class="book-first">[经管]</li>
+                        <li><a href="">经济学</a></li>
+                        <li><a href="">管理</a></li>
+                        <li><a href="">金融</a></li>
+                        <li><a href="">商业</a></li>
+                        <li><a href="">营销</a></li>
+                        <li><a href="">理财</a></li>
+                        <li><a href="">股票</a></li>
+                        <li><a href="">企业史</a></li>
+                        <li><a href="">更多</a></li>
+                    </ul>
+                    <ul class="book-list list-last">
+                        <li class="book-first">[科技]</li>
+                        <li><a href="">科普</a></li>
+                        <li><a href="">互联网</a></li>
+                        <li><a href="">编程</a></li>
+                        <li><a href="">交互设计</a></li>
+                        <li><a href="">算法</a></li>
+                        <li><a href="">通信</a></li>
+                        <li><a href="">神经网络</a></li>
+                        <li><a href="">更多</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    <!--音乐-->
+    <div id="con-music" class="clear-float">
+            <div class="child-nav">
+                <h2><a href="">音乐</a></h2>
+                <ul>
+                    <li><a href="">音乐人</a></li>
+                    <li><a href="">金羊毛计划</a></li>
+                    <li><a href="">专题</a></li>
+                    <li><a href="">歌单</a></li>
+                    <li><a href="">排行榜</a></li>
+                    <li><a href="">乐评</a></li>
+                    <li><a href="">分类浏览</a></li>
+                    <li><a href="">豆瓣FM</a></li>
+                    <li class="nav-li-photo">
+                        <a href="" class="nav-photo music-nav-photo"></a>
+                        <a href="">豆瓣FM</a>
+                    </li>
+                    <li class="nav-li-photo">
+                        <a href="" class="nav-photo music-nav-photo1"></a>
+                        <a href="">豆瓣音乐人</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="child-cont">
+                <h3>豆瓣新碟榜······</h3><span>（<a href="">更多</a>）</span>
+                <div class="clear-float"></div>
+                <dl class="child-ul music-show ">
+                    <dt><a href=""><img src="doubanimg/music1.jpg" alt=""/></a></dt>
+                    <dd>1.<a href="">翻白眼|||</a></dd>
+                    <dd><a href="">周笔畅</a></dd>
+                    <dd class="music-point">8.2</dd>
+                </dl>
+                <dl class="child-ul music-show">
+                    <dt><a href=""><img src="doubanimg/music2.jpg" alt=""/></a></dt>
+                    <dd>2.<a href=""> 如同悲伤被下载了两次</a></dd>
+                    <dd><a href="">陈珊妮</a></dd>
+                    <dd class="music-point">8.2</dd>
+                </dl>
+                <dl class="child-ul music-show ">
+                    <dt><a href=""><img src="doubanimg/music3.jpg" alt=""/></a></dt>
+                    <dd>3.<a href=""> 敷衍</a></dd>
+                    <dd><a href="">王菲</a></dd>
+                    <dd class="music-point">8.2</dd>
+                </dl>
+                <dl class="child-ul music-show">
+                    <dt><a href=""><img src="doubanimg/music4.jpg" alt=""/></a></dt>
+                    <dd>4.<a href="">Addendum</a></dd>
+                    <dd><a href="">麦浚龙</a></dd>
+                    <dd class="music-point">8.2</dd>
+                </dl>
+                <dl class="child-ul music-show">
+                    <dt><a href=""><img src="doubanimg/music5.jpg" alt=""/></a></dt>
+                    <dd>5.<a href="">Honeymoon</a></dd>
+                    <dd><a href="">Lana Del Rey</a></dd>
+                    <dd class="music-point">8.2</dd>
+                </dl>
+                <dl class="child-ul music-show">
+                    <dt><a href=""><img src="doubanimg/music6.jpg" alt=""/></a></dt>
+                    <dd>6.<a href="">第十三天（中）</a></dd>
+                    <dd><a href="">Honeymoon</a></dd>
+                    <dd class="music-point">8.2</dd>
+                </dl>
+                <dl class="child-ul music-show">
+                    <dt><a href=""><img src="doubanimg/music7.jpg" alt=""/></a></dt>
+                    <dd>7.<a href="">伊斯坦布尔</a></dd>
+                    <dd><a href="">Honeymoon</a></dd>
+                    <dd class="music-point">8.2</dd>
+                </dl>
+                <dl class="child-ul music-show">
+                    <dt><a href=""><img src="doubanimg/music8.jpg" alt=""/></a></dt>
+                    <dd><a href="">Honeymoon</a></dd>
+                    <dd><a href="">Lana Del Rey</a></dd>
+                    <dd class="music-point">8.2</dd>
+                </dl>
+
+                <p><h3 class="book-opus">热门歌单······</h3><span>（<a href="">更多</a>）</span></p>
+                <dl class="child-ul music-show" style="clear:both;">
+                    <dt><a href="" class="music-play"><img src="doubanimg/music9.jpg" alt=""/><p></p></a></dt>
+                    <dd>港囧 Lost in Hong Kong</dd>
+                </dl>
+                <dl class="child-ul music-show">
+                    <dt><a href="" class="music-play"><img src="doubanimg/music10.jpg" alt=""/><p></p></a></dt>
+                    <dd>耳熟能详的日语歌 No.1</dd>
+                </dl>
+                <dl class="child-ul music-show">
+                    <dt><a href="" class="music-play"><img src="doubanimg/music11.jpg" alt=""/><p></p></a></dt>
+                    <dd>一個人在空曠的街上行走</dd>
+                </dl>
+                <dl class="child-ul music-show">
+                    <dt><a href="" class="music-play"><img src="doubanimg/music12.jpg" alt=""/><p></p></a></dt>
+                    <dd>宫崎骏与久石让</dd>
+                </dl>
+            </div>
+            <div class="child-side">
+                <h3>本周流行音乐人······</h3><span>（<a href="">更多</a>）</span>
+                <dl class="music-list">
+                    <span>1.</span>
+                    <dt><a href="" class="music-sort"><img src="doubanimg/mlist1.jpg" alt=""/><strong><i></i><p></p></strong></a></dt>
+                    <dd><a href="">鲸鱼岛乐队</a></dd>
+                    <dd>流派:<strong>流行 Pop</strong></dd>
+                    <dd>10721人关注 </dd>
+                </dl>
+                <dl class="music-list">
+                    <span>2.</span>
+                    <dt><a href="" class="music-sort"><img src="doubanimg/mlist1.jpg" alt=""/><strong><i></i><p></p></strong></a></dt>
+                    <dd><a href="">鲸鱼岛乐队</a></dd>
+                    <dd>流派:<strong>流行 Pop</strong></dd>
+                    <dd>10721人关注 </dd>
+                </dl>
+                <dl class="music-list">
+                    <span>3.</span>
+                    <dt><a href="" class="music-sort"><img src="doubanimg/mlist1.jpg" alt=""/><strong><i></i><p></p></strong></a></dt>
+                    <dd><a href="">鲸鱼岛乐队</a></dd>
+                    <dd>流派:<strong>流行 Pop</strong></dd>
+                    <dd>10721人关注 </dd>
+                </dl>
+                <dl class="music-list">
+                    <span>4.</span>
+                    <dt><a href="" class="music-sort"><img src="doubanimg/mlist1.jpg" alt=""/><strong><i></i><p></p></strong></a></dt>
+                    <dd><a href="">鲸鱼岛乐队</a></dd>
+                    <dd>流派:<strong>流行 Pop</strong></dd>
+                    <dd>10721人关注 </dd>
+                </dl>
+                <dl class="music-list">
+                    <span>5.</span>
+                    <dt><a href="" class="music-sort"><img src="doubanimg/mlist1.jpg" alt=""/><strong><i></i><p></p></strong></a></dt>
+                    <dd><a href="">鲸鱼岛乐队</a></dd>
+                    <dd>流派:<strong>流行 Pop</strong></dd>
+                    <dd>10721人关注 </dd>
+                </dl>
+            </div>
+        </div>
+
+    <!--市集-->
+        <div class="con-box clear-float">
+            <div id="con-buy"  >
+                <div class="child-nav">
+                    <h2><a href="">市集</a></h2>
+                    <ul>
+                        <li><a href="">女装</a></li>
+                        <li><a href="">男装</a></li>
+                        <li><a href="">包装</a></li>
+                        <li><a href="">配饰</a></li>
+                        <li><a href="">食品</a></li>
+                        <li><a href="">个护</a></li>
+                        <li><a href="">家居</a></li>
+                    </ul>
+                </div>
+                <div class="child-cont">
+                    <h3>热门商品······</h3><span>（<a href="">更多</a>）</span>
+                    <div class="clear-float"></div>
+                    <div class="cont-product">
+                        <dl class="product-first ">
+                            <dt><a href=""><img src="doubanimg/buy1.jpg" alt=""/></a></dt>
+                            <dd><a href=""><span>她时光</span>小号复古波士顿包<span>409.00</span></a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href=""><img src="doubanimg/buy2.jpg" alt=""/></a></dt>
+                            <dd><a href="">她时光 小号</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href=""><img src="doubanimg/buy2.jpg" alt=""/></a></dt>
+                            <dd><a href="">她时光 小号</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href=""><img src="doubanimg/buy2.jpg" alt=""/></a></dt>
+                            <dd><a href="">她时光 小号</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href=""><img src="doubanimg/buy2.jpg" alt=""/></a></dt>
+                            <dd><a href="">她时光 小号</a></dd>
+                        </dl>
+                    </div>
+                    <div class="cont-product">
+                        <dl class="product-first ">
+                            <dt><a href=""><img src="doubanimg/buy1.jpg" alt=""/></a></dt>
+                            <dd><a href=""><span>她时光</span>小号复古波士顿包<span>409.00</span></a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href=""><img src="doubanimg/buy2.jpg" alt=""/></a></dt>
+                            <dd><a href="">她时光 小号</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href=""><img src="doubanimg/buy2.jpg" alt=""/></a></dt>
+                            <dd><a href="">她时光 小号</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href=""><img src="doubanimg/buy2.jpg" alt=""/></a></dt>
+                            <dd><a href="">她时光 小号</a></dd>
+                        </dl>
+                        <dl>
+                            <dt><a href=""><img src="doubanimg/buy2.jpg" alt=""/></a></dt>
+                            <dd><a href="">她时光 小号</a></dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="child-side">
+                    <h3>热门店铺······</h3><span>（<a href="">更多</a>）</span>
+                    <dl class="shop-list">
+                        <dt><a href="" class="shop-sort"><img src="doubanimg/shop1.jpg" alt=""/></a></dt>
+                        <dd><a href="">木与石</a></dd>
+                        <dd>倾心,自然,独特,美好。木与石原创优品只为独特的你，不随波逐... </dd>
+                    </dl>
+                    <dl class="shop-list">
+                        <dt><a href="" class="shop-sort"><img src="doubanimg/shop1.jpg" alt=""/></a></dt>
+                        <dd><a href="">木与石</a></dd>
+                        <dd>倾心,自然,独特,美好。木与石原创优品只为独特的你，不随波逐... </dd>
+                    </dl>
+                    <dl class="shop-list">
+                        <dt><a href="" class="shop-sort"><img src="doubanimg/shop1.jpg" alt=""/></a></dt>
+                        <dd><a href="">木与石</a></dd>
+                        <dd>倾心,自然,独特,美好。木与石原创优品只为独特的你，不随波逐... </dd>
+                    </dl>
+                    <dl class="shop-list">
+                        <dt><a href="" class="shop-sort"><img src="doubanimg/shop1.jpg" alt=""/></a></dt>
+                        <dd><a href="">木与石</a></dd>
+                        <dd>倾心,自然,独特,美好。木与石原创优品只为独特的你，不随波逐... </dd>
+                    </dl>
+                    <dl class="shop-list">
+                        <dt><a href="" class="shop-sort"><img src="doubanimg/shop1.jpg" alt=""/></a></dt>
+                        <dd><a href="">木与石</a></dd>
+                        <dd>倾心,自然,独特,美好。木与石原创优品只为独特的你，不随波逐... </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+</div>
+<!--内容区域结束-->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
